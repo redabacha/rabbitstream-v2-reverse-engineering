@@ -1,3 +1,6 @@
+> [!NOTE]
+> This now has a working solution, see https://github.com/drblgn/rabbit_wasm with [a no-eval patch here](https://github.com/joshholly/rabbitstream_api/commit/e88af45bc711c9242e77ffe3f49b821a5eb57080). You should run this in a secure environment as it relies on running untrusted code (albeit sandboxed in WebAssembly) from rabbitstream.
+
 # Rabbitstream V2 Reverse Engineering
 
 the js injects a [wasm bindgen](https://github.com/rustwasm/wasm-bindgen) binary (disguised as a png image, https://rabbitstream.net/images/loading.png?v=0.4) into the page which then attaches the following functions to the window object after calling the `greet` method:
